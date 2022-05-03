@@ -1,0 +1,29 @@
+mat-form-field{
+  text-align:right;
+}
+#searchMovie{
+  height: 52px;
+  margin: 5px;
+}
+ngb-pagination{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  margin-top:10px;
+}
+.card{
+  width:20rem;
+  margin-top: 1.15rem;
+
+}
+
+@media (min-width: 360px) and (max-width: 768px){
+  .card{
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+mat-label{
+  color:black;
+}
+::ng-deep .mat-form-field-appearance-outline  .mat-form-field-outline  { color: black; }

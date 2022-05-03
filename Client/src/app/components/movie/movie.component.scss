@@ -1,0 +1,24 @@
+.card-header{
+  color:#f5c518;
+  background-color:black;
+}
+.card-text{
+  margin-bottom: 2rem;
+}
+.bi-star-fill{
+  color: #f5c518;
+}
+.bi-info-circle-fill{
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+}
+::ng-deep .page-item.active .page-link {
+  background-color: #f5c518;
+  border-color: #f5c518;
+}
+::ng-deep .page-link {
+  color: #f5c518;
+  background-color: #000;
+}

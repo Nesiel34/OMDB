@@ -1,0 +1,19 @@
+<!-- <div class="card"> -->
+
+
+
+  <div class="card-header">{{movieResult.title}}</div>
+  <img class="card-img-start" src="{{movieResult.image}}" alt="Card image cap">
+  <div class="card-body">
+    <span>
+      <i class="bi bi-star-fill"></i>
+      {{movieResult.imDbRating}}
+      </span>
+    <p class="card-text">{{movieResult.plot}}</p>
+    <i class="bi bi-info-circle-fill" (click)="moreInfo(modalMovie)" title="למידע נוסף"></i>
+  </div>
+  <ng-template #modalMovie>
+    <app-movie-modal [movieResultModal]="movieResult" (closeModal)="close()" (dismissModal)="dismiss()"></app-movie-modal>
+    </ng-template>
+<!-- </div> -->
+

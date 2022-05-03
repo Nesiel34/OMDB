@@ -1,0 +1,22 @@
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{movieResultModal.title}}</h4>
+    <button type="button" class="close" (click)="dismiss()">
+      <!-- (click)="modal.dismiss()" -->
+      <span>×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div title="זמן הסרט">
+      <i class="bi bi-hourglass-split"></i>{{movieResultModal.runtimeStr}}
+    </div>
+    <div title="ז'אנר">
+      <i class="bi bi-tags"></i>{{movieResultModal.genres}}
+    </div>
+    <div title="שחקנים">
+      <i class="bi bi-stars"></i>{{movieResultModal.stars}}
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="close()">אישור</button>
+    <!-- (click)="modal.close()" -->
+  </div>

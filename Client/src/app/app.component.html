@@ -1,0 +1,23 @@
+
+  <form class="d-flex justify-content-center" >
+    <button id="searchMovie" type="button" class="btn btn-warning" (click)="search()">חיפוש</button>
+    <mat-form-field appearance="outline">
+      <mat-label>שם סרט</mat-label>
+      <input matInput [formControl]="searchControl" placeholder="שם סרט">
+      <mat-error *ngIf="searchControl.invalid">יש להזין שם סרט</mat-error>
+    </mat-form-field>
+  </form>
+  <div *ngIf="!noResult">
+    <div class="d-flex flex-wrap justify-content-center">
+      <app-movie *ngFor="let item of result.results | slice: (page-1) * pageSize : page * pageSize"  [movieResult]="item" class="card"></app-movie>
+    </div>
+    <!-- <router-outlet></router-outlet> -->
+    <ngb-pagination
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="result.results.length"></ngb-pagination>
+  </div>
+<div *ngIf="noResult">
+  <h1 class="text-center">{{errMsg}}</h1>
+</div>
+
